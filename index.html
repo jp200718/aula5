@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="background">
+  <section class="content">
+    <div class="header">
+      <img src="assets/images/logo.svg" alt="">
+      <div class="theme">
+        <img id="moon" src="assets/images/icon-moon.svg" alt="Lua" class="icon"> 
+        <img id="sun" src="assets/images/icon-sun.svg" alt="Sol" class="icon show"> 
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="title-page">
+       Extensions List
+      </h1>
+      <div class="filter-buttons">
+        <button class="all-btn">All</button>
+        <button>Active</button>
+        <button>Inactive</button>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-top">
+            <img class="image" src="assets/images/logo-devlens.svg" alt="">
+            <div class="info">
+              <p class="title">
+                DevLens
+              </p>
+              <span class="description">
+                Quickly inspect page layouts and visualize element boundaries.
+              </span>
+          </div>
+          
+          </div>
+          <div class="buttons">
+              <button class="remove">Remove</button>
+              <label class="switch">
+                <input class="input" type="checkbox" >
+                <span class="slider "></span>
+              </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
