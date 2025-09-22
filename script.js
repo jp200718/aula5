@@ -5,4 +5,6 @@ const toggle = document.querySelector(".theme");
 toggle.addEventListener("click", () => {
   moon.classList.toggle("show");
   sun.classList.toggle("show");
+
+  toggle.classList.toggle("sun")
 });

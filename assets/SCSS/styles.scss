@@ -51,6 +51,10 @@ $font-family-base: "Noto Sans", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.sun{
+        background-color: hsl(226, 11%, 37%);
+    }
 }
 .icon{
     width: 100%;
