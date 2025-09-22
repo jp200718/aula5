@@ -44,13 +44,19 @@ $font-family-base: "Noto Sans", sans-serif;
 }
 
 .theme{
-    background-color: hsl(0, 0%, 93%);
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.moon{
+        background-color: hsl(0, 0%, 93%);
+    }
+    &.sun{
+        background-color: hsl(226, 11%, 37%);
+    }
 }
 .icon{
     width: 100%;
