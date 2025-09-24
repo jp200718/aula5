@@ -13,7 +13,9 @@
 <body class="background">
   <section class="content">
     <div class="header">
-      <img src="assets/images/logo.svg" alt="">
+      <img src="assets/images/logo.svg" alt="" class="logo show">
+      
+      <img src="assets/images/logo-dark.svg" alt="" class="logo">
 
       <div class="theme">
         <img id="moon" src="assets/images/icon-moon.svg" alt="Lua" class="icon show"> 
@@ -22,13 +24,15 @@
 
     </div>
     <div class="container">
-      <h1 class="title-page">
-       Extensions List
-      </h1>
-      <div class="filter-buttons">
-        <button class="all-btn">All</button>
-        <button>Active</button>
-        <button>Inactive</button>
+      <div class="page-top">
+        <h1 class="title-page">
+         Extensions List
+        </h1>
+        <div class="filters">
+          <button class="filter-btn active-btn" id="all">All</button>
+          <button class="filter-btn" id="active">Active</button>
+          <button class="filter-btn" id="inactive">Inactive</button>
+        </div>
       </div>
       <div class="cards">
         <div class="card">
