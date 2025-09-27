@@ -8,33 +8,59 @@ const cards = document.querySelectorAll(".card");
 const btnActive = document.getElementById("active")
 const btnInactive= document.getElementById("inactive");
 
-btnActive.addEventListener("click", () => {
-  const actives = document.querySelectorAll(".active");
-  const qtd = actives.length;
-if (qtd === 0) {
-  console.log("Não existem elementos ativos na página");
-} else if (qtd === 1) {
-  console.log(`Existe ${qtd} elemento ativo na página`);
-} else {
-  console.log(`Existem ${qtd} elementos ativos na página`);
-}
-});
-
-// deixar no plural 
-btnInactive.addEventListener("click", () => {
- const inactives = document.querySelectorAll(".inactive")
- const qtd = inactives.length;
-if (qtd === 0) {
-  console.log("Não existe elemento inativo na página");
-} else if (qtd === 1) {
-  console.log(`Existe ${qtd} elemento inativo na página`);
-} else {
-  console.log(`Existem ${qtd} elementos inativos na página`);
-}
+function reportElements(className, label) {
+  const qtd = document.querySelectorAll(`.${className}`).length;
   
-})
+  if (qtd === 0) {
+    console.log(`Não existem elementos ${label}s na página`);
+    
+  } else {
+    const verbo = qtd > 1 ? "Existem" : "Existe";
+    const plural = qtd > 1 ? "s" : "";
 
-// fim 
+    console.log(
+      `${verbo} ${qtd} elemento${plural} ${label}${plural} na página`
+    );
+
+  }
+}
+// ao ocorrer o click filtra e esconde o card 
+
+
+  btnActive.addEventListener("click", () => {
+    reportElements("active", "ativo");    
+  });
+
+  btnInactive.addEventListener("click", () => {
+    reportElements("inactive", "inativo");
+  });
+
+// btnActive.addEventListener("click", () => {
+//   const actives = document.querySelectorAll(".active");
+//   const qtd = actives.length;
+// if (qtd === 0) {
+//   console.log("Não existem elementos ativos na página");
+// } else {
+//   console.log(
+//     `${qtd > 1 ? "Existem" : "Existe"} ${qtd} ${qtd > 1 ? "elementos ativos" : "elemento ativo"} na página`
+//   );
+// }
+// });
+
+
+// btnInactive.addEventListener("click", () => {
+//  const inactives = document.querySelectorAll(".inactive")
+//  const qtd = inactives.length;
+// if (qtd === 0) {
+//   console.log("Não existe elementos inativos na página");
+// } else {
+//   console.log(
+//     `${qtd > 1 ? "Existem" : "Existe"} ${qtd} ${qtd > 1 ? "elementos inativos" : "elemento inativo"} na página`
+//   );
+// }
+  
+// })
+
 
 // console.log('Existem' + 4 + 'elementos ativos na pagina')
 
