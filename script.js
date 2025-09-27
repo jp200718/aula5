@@ -5,8 +5,38 @@ const logos = document.querySelectorAll(".logo");
 const body = document.body;
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
+const btnActive = document.getElementById("active")
+const btnInactive= document.getElementById("inactive");
 
+btnActive.addEventListener("click", () => {
+  const actives = document.querySelectorAll(".active");
+  const qtd = actives.length;
+if (qtd === 0) {
+  console.log("Não existem elementos ativos na página");
+} else if (qtd === 1) {
+  console.log(`Existe ${qtd} elemento ativo na página`);
+} else {
+  console.log(`Existem ${qtd} elementos ativos na página`);
+}
+});
 
+// deixar no plural 
+btnInactive.addEventListener("click", () => {
+ const inactives = document.querySelectorAll(".inactive")
+ const qtd = inactives.length;
+if (qtd === 0) {
+  console.log("Não existe elemento inativo na página");
+} else if (qtd === 1) {
+  console.log(`Existe ${qtd} elemento inativo na página`);
+} else {
+  console.log(`Existem ${qtd} elementos inativos na página`);
+}
+  
+})
+
+// fim 
+
+// console.log('Existem' + 4 + 'elementos ativos na pagina')
 
 cards.forEach(card => {
   const slider = card.querySelector(".input");
