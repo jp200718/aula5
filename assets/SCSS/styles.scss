@@ -107,7 +107,7 @@ $font-family-base: "Noto Sans", sans-serif;
         justify-content: space-around;
         flex-direction: column;
         // pedi ajuda ao copilot para ajustar a largura 
-        width: 450px;
+        width: 400px;
         padding: 20px;
         
         &-top{
@@ -204,6 +204,12 @@ $font-family-base: "Noto Sans", sans-serif;
             }
 
         }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     &.dark {

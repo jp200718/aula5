@@ -6,7 +6,8 @@ const body = document.body;
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
 const btnActive = document.getElementById("active")
-const btnInactive= document.getElementById("inactive");
+const btnInactive = document.getElementById("inactive");
+const btnAll = document.getElementById("all");
 
 function reportElements(className, label) {
   const qtd = document.querySelectorAll(`.${className}`).length;
@@ -24,7 +25,39 @@ function reportElements(className, label) {
 
   }
 }
-// ao ocorrer o click filtra e esconde o card 
+// ao ocorrer o click filtrar e esconder  o card 
+// ao clicar no inativo esconde o card que esta ativo 
+// ao clicar no ativo esconde o card que esta inativo
+// inicio
+function hideCards(className) {
+  const cards = document.querySelectorAll(className);
+  cards.forEach(card => {
+    card.style.display = "none";
+  });
+}
+
+function showCards(className) {
+  const cards = document.querySelectorAll(className);
+  cards.forEach(card => {
+    card.style.display = "block";
+  });
+}
+btnAll.addEventListener("click", () => {
+  showCards(".active");
+  showCards(".inactive");
+});
+
+btnInactive.addEventListener("click", () => {
+  hideCards(".active");
+  showCards(".inactive");
+});
+
+btnActive.addEventListener("click", () => {
+  hideCards(".inactive");
+  showCards(".active")
+});
+
+// fim
 
 
   btnActive.addEventListener("click", () => {
