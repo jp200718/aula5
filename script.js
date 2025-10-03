@@ -25,38 +25,28 @@ function reportElements(className, label) {
 
   }
 }
-// ao ocorrer o click filtrar e esconder  o card 
-// ao clicar no inativo esconde o card que esta ativo 
-// ao clicar no ativo esconde o card que esta inativo
-// inicio
-function hideCards(className) {
-  const cards = document.querySelectorAll(className);
-  cards.forEach(card => {
-    card.style.display = "none";
-  });
-}
+// início refatoração código
+// Função única para alternar a visibilidade
+const toggleCards = (className, display) => 
+  document.querySelectorAll(className).forEach(card => card.style.display = display);
 
-function showCards(className) {
-  const cards = document.querySelectorAll(className);
-  cards.forEach(card => {
-    card.style.display = "block";
-  });
-}
+const show = 'block';
+const hide = 'none';
+
 btnAll.addEventListener("click", () => {
-  showCards(".active");
-  showCards(".inactive");
+  toggleCards(".active", show);
+  toggleCards(".inactive", show);
 });
 
 btnInactive.addEventListener("click", () => {
-  hideCards(".active");
-  showCards(".inactive");
+  toggleCards(".active", hide);
+  toggleCards(".inactive", show);
 });
 
 btnActive.addEventListener("click", () => {
-  hideCards(".inactive");
-  showCards(".active")
+  toggleCards(".inactive", hide);
+  toggleCards(".active", show);
 });
-
 // fim
 
 
